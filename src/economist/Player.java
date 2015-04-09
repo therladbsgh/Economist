@@ -82,5 +82,13 @@ public class Player{
 	public boolean trashItem(ItemType itemType, int amount){
 		return this.inventory.removeItem(itemType, amount);
 	}
+	
+	public void displayInventory(){
+		System.out.println("-----ARMOR-----");
+		this.inventory.displayArmor();
+		System.out.println("------BAG------");
+		this.inventory.displayBag();
+		System.out.println("---------------");
+	}
 
 }

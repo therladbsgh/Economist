@@ -34,27 +34,27 @@ public class Economist {
 			switch(result.toLowerCase()){
 				case "work":
 					player.work(player);
-					System.out.println("");
 					break;
 				case "help":
 					System.out.println("Commands:");
 					System.out.println("work: Do your job");
 					System.out.println("stat: Shows your statistics");
 					System.out.println("exit: Exits the game");
-					System.out.println("");
 					break;
 				case "stat":
 					player.showStatistics();
-					System.out.println("");
 					break;
 				case "exit":
 					gameRunning = false;
 					break;
+				case "inventory":
+					player.displayInventory();
+					break;
 				default:
 					System.out.println("Wrong input.");
-					System.out.println("");
 					break;
 			}
+			System.out.println("");
 		}
 		
 		scanner.close();

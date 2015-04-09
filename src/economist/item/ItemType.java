@@ -6,7 +6,11 @@ public enum ItemType {
 	STONE("Stone", 1),
 	GRASS("Grass", 2),
 	DIRT("Dirt", 3),
-	BADDIRT("Bad Dirt", 3, 1);
+	BADDIRT("Bad Dirt", 3, 1),
+	LEATHER_HELM("Leather Helmet",100),
+	LEATHER_CHESTPLATE("Leather Chestplate", 101),
+	LEATHER_PANTS("Leather Pants", 102),
+	LEATHER_BOOTS("Leather Boots", 103);
 	
 	private final String name;
 	private final int id;
@@ -38,6 +42,18 @@ public enum ItemType {
 	
 	public int getSubValue(){
 		return subValue;
+	}
+	
+	public boolean isArmor(){
+		switch(this){
+		case LEATHER_HELM:
+		case LEATHER_CHESTPLATE:
+		case LEATHER_PANTS:
+		case LEATHER_BOOTS:
+			return true;
+		default:
+			return false;
+		}
 	}
 
 }
